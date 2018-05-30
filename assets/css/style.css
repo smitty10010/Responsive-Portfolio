@@ -1,0 +1,403 @@
+/* setting basic template for body */
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 23px;
+    background-image: url(../images/light-grey-terrazzo.png);
+}
+
+
+/* creating grid with 6 columns and 3 rows. */
+
+.container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 240px 240px 240px 240px 1fr;
+    grid-template-rows: 20% auto 1fr;
+    height: 100vh;
+    grid-template-areas: "header header header nav nav nav" ".... main main main main ...." "footer footer footer footer footer footer";
+}
+
+
+/* placing header */
+
+header {
+    grid-column: 1/4;
+    border-bottom: 5px solid #cccccc;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: bold;
+    height: 100px;
+    background-color: white;
+}
+
+h1 {
+    grid-column: 2/3;
+    text-align: center;
+    margin: 0% 35% 30% 30%;
+    background-color: blueviolet;
+    padding: 5% 0% 6.2% 0%;
+    color: white;
+}
+
+
+/* nav bar will be in same column as header */
+
+nav {
+    grid-column: 4/7;
+    border-bottom: 5px solid #cccccc;
+    height: 100px;
+    background-color: white;
+}
+
+ul {
+    margin: 6% 0% 0% 36.8%;
+    padding: 0 0 0 20px;
+}
+
+li {
+    padding: 0 8px 0 8px;
+    border-right: 1px solid #cccccc;
+    display: inline;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+a:visited {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    transition: color 1s;
+}
+
+
+/* the main content area should take up the width of only 960px */
+
+main {
+    grid-area: main;
+    background-color: #cccccc;
+    margin: 5% 0 17% 0;
+    border: 1px solid green;
+}
+
+img {
+    float: left;
+    margin: 0 3% 0 4%;
+    height: 146px;
+    width: 197px;
+}
+
+main section h2 {
+    margin: 2% 10% 3% 4%;
+    border-bottom: 5px solid white;
+    padding: 0% 0% 1% 0%;
+}
+
+main section article p {
+    padding-left: 5%;
+    margin: 0 10% 3% 0;
+}
+
+
+/* creating sub grid for portfolio html */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 200px 5% 200px;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0% 0% 0% 4%;
+}
+
+.portfolio>p {
+    z-index: 2;
+    opacity: .5;
+}
+
+.portfolio>img {
+    margin: 0 0 5% 0;
+    border: 1px solid black;
+    opacity: .5;
+    z-index: 1;
+}
+
+.portfolio>img:hover {
+    opacity: 1;
+}
+
+.portfolio>p:hover {
+    opacity: 1;
+}
+
+.portfolio>#hangman {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.portfolio>#hangmanp {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 94%;
+    height: 25%;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 80px;
+    color: #ffffff;
+    background-color: #4aaaa5;
+}
+
+.portfolio>#rpg_game {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.portfolio>#rpg_gamep {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 94%;
+    height: 25%;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 80px;
+    color: #ffffff;
+    background-color: #4aaaa5;
+}
+
+.portfolio>#trivia_game {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.portfolio>#trivia_gamep {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 94%;
+    height: 25%;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 80px;
+    color: #ffffff;
+    background-color: #4aaaa5;
+}
+
+.portfolio>#rutgers_info_widget {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.portfolio>#rutgers_info_widgetp {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 94%;
+    height: 25%;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 80px;
+    color: #ffffff;
+    background-color: #4aaaa5;
+}
+
+.portfolio>#rock_paper_scissors {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.portfolio>#rock_paper_scissorsp {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 94%;
+    height: 25%;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 80px;
+    color: #ffffff;
+    background-color: #4aaaa5;
+}
+
+
+/* the form css for the contact html */
+
+form span {
+    margin: 0% 0% 0% 5%;
+}
+
+#name,
+#mail,
+#msg {
+    width: 798px;
+    margin: 0% 0% 0% 5%;
+}
+
+#msg {
+    padding-bottom: 70px;
+}
+
+.button {
+    margin-left: 5%;
+}
+
+button {
+    padding: 15px 40px;
+    margin-top: 17px;
+    margin-bottom: 25px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    border: none;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    grid-area: footer;
+    background-color: gray;
+    color: white;
+    border-top: 5px solid green;
+}
+
+footer>h3 {
+    margin: 0% 0% 1% 0%;
+}
+
+
+/* icons from awesome font */
+
+@media screen and (max-width: 980px) {
+    h1 {
+        height: 45%;
+    }
+    footer {
+        height: 25%;
+        margin-top: auto;
+        padding-bottom: 4%;
+    }
+    .icons {
+        margin: 0%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 7% auto;
+        grid-template-areas: "header header" "nav nav" "main main" "footer footer";
+    }
+    header {
+        grid-area: 1/1;
+    }
+    h1 {
+        height: 27%;
+        padding: 10% 0% 11% 0%;
+        margin-left: 0%;
+    }
+    nav {
+        grid-column: 2/3;
+    }
+    ul {
+        padding-top: 6%;
+    }
+    main {
+        margin: 0% 2% 3% 2%;
+    }
+    footer {
+        height: 25%;
+        margin-top: auto;
+        padding-bottom: 4%;
+    }
+    h3 {
+        margin: 0%;
+    }
+    ul.icons {
+        margin: 0%;
+        padding: 0%;
+    }
+    form span {
+        margin: 0% 0% 0% 5%;
+    }
+    #name {
+        width: 75vw;
+        ;
+        margin: 0% 0% 0% 5%;
+    }
+    #mail {
+        width: 75vw;
+    }
+    #msg {
+        width: 75vw;
+        padding-bottom: 7%;
+    }
+    .button {
+        margin-left: 5%;
+    }
+    button {
+        margin-top: 3%;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10% 7% auto auto;
+        grid-template-areas: "header header header header" "nav nav nav nav" ".... main main ...." "footer footer footer footer";
+    }
+    header {
+        grid-area: header;
+        height: 100%;
+    }
+    h1 {
+        grid-area: header;
+        padding: 5% 0% 5% 2%;
+        margin: 0% 0% 0% 0%;
+    }
+    nav {
+        grid-area: nav;
+        height: 100%;
+        margin: 0% 0% 0% 0%;
+        padding: 0% 0% 0% 0%;
+    }
+    ul {
+        margin: 0% 0% 0% 0%;
+        padding: 2% 0% 0% 30%;
+    }
+    main {
+        grid-area: main;
+        width: 100%;
+        margin: 3% -3% 3% 1%;
+    }
+    .icons {
+        margin: 0%;
+        padding: 0%;
+    }
+    form span {
+        margin: 0% 0% 0% 5%;
+    }
+    #name {
+        width: 75vw;
+        ;
+        margin: 0% 0% 0% 5%;
+    }
+    #mail {
+        width: 75vw;
+    }
+    #msg {
+        width: 75vw;
+        padding-bottom: 7%;
+    }
+    .button {
+        margin-left: 5%;
+    }
+    button {
+        margin-top: 3%;
+        margin-bottom: 1%;
+    }
+}
